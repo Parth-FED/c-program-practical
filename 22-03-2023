@@ -26,5 +26,101 @@ int main()
 	   	printf("\nyour city is %s\n",str);
 }
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+(2)
+//petarn demo
+
+#include<stdio.h>
+int main()
+{
+	int i,j,n;
+	printf("Enter your number: ");
+	scanf("%d",&n);
+	
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			printf("*",j);
+		}
+		printf("\t\n");
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+(3)
+// copy by string..........
+#include<stdio.h>
+int main()
+{
+	char str1[]=("parth");
+	char str2[]=("kotadiya");
+	char str3[20];
+	strcpy(str3,str1);
+	printf("%s",str3);
+	strcpy(str3,str2);
+	printf("%s",str3);
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+(4)
+//fectoniyal by for loop.....
+
+#include<stdio.h>
+int main()
+{
+   int n=1,f=1,i;
+   printf("Enter any number:");
+   scanf("%d",&n);
+  
+  for(i=1;i<=n;i++)
+  {
+  	f=f*i;
+  }
+  printf("factonial is : %d",f,n);
+
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+(5)
+//fectoniyal by while loop.....
+#include<stdio.h>
+int main()
+{
+	int i=1,f=1,n;
+	printf("Enter any number:");
+	scanf("%d",&n);
+	
+	while(i<=n)
+	{
+		f=f*i;
+		i++;
+	}
+	printf("factoniyal is :%d ",f,i);
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+(6)
+// reverse by string
+#include<stdio.h>
+int main()
+{
+	char str[10]=("address");
+	printf("%s",strrev(str));
+
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+(7)
+//contcatenates by string
+
+#include<stdio.h>
+int main()
+{
+	char str1[]=("parth");
+	char str2[]=("kotadiya");
+	
+	printf("%s",strcat(str1,str2));
+}
 
 
