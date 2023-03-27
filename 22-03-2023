@@ -1,0 +1,30 @@
+(1)-------
+// biodata by string
+
+
+#include<stdio.h>
+int main()
+{
+	char str[10];
+	printf("Enter your name: ");
+	scanf("%s",&str);
+	
+	    printf("\nyour name is %s\n",str);
+	
+	printf("\nEnter your surname:");
+	scanf("%s",&str);	
+	
+	    printf("\nyour surname is %s\n",str);
+	
+	printf("\nEnter your address:");
+	scanf("%s",&str);
+	
+		printf("\nyour address is %s\n",str);
+	
+	printf("\nEnter your city:");
+	scanf("%s",&str);
+	   	printf("\nyour city is %s\n",str);
+}
+
+
+
