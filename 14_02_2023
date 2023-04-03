@@ -1,0 +1,108 @@
+[1].................................................................................................
+//add,sub,mul,div,mod = all
+
+#include<stdio.h>
+int main()
+
+{
+	int a,b,add,sub,mul,div,mod;
+		printf("\n enter the value of a and b: ");
+		scanf("%d %d",&a,&b);
+		
+		add=a+b;
+		sub=a-b;
+		mul=a*b;
+		div=a/b;
+		mod=a%b;
+		
+		printf("add%d \nsub%d \nmul%d \ndiv%d \nmod%d:%d",add,sub,mul,div,mod);
+		
+}
+
+
+[2].................................................................................................
+//  ascii value
+#include<stdio.h>
+
+ void main()
+ 
+ {
+ 	char c;
+ 	printf("\n enter any character : ");
+ 	scanf("%c",&c);
+ 	
+ 	printf("\n the value of ASCII is %c: %d",c,c);
+ 	
+ 	return 0 ;
+ }
+
+
+[3].................................................................................................
+//convert ascii value from small to large or large to small
+#include<stdio.h>
+
+void main()
+{
+	char sml,cap;
+	printf("\n enter small character : ");
+	scanf("%c",&sml);
+	
+	cap=sml-32;
+	printf("\n CAPITAL VALUE OF ascii is : %c",cap);
+	
+}
+
+
+[4].................................................................................................
+// incriment dicriment opretor topic for thr lup consept
+
+#include<stdio.h>
+
+int main()
+{
+	int a=10,b=20;
+	printf("\n enter the value of a: ");
+	//printf("\n%d",a);
+	printf("\n%d",a++);
+	printf("\n%d",a);
+	
+	printf("\n enter the value of b: ");
+	//printf("\n%d",b);
+	printf("\n%d",b--);
+	printf("\n%d",b);
+	
+}
+
+[5].................................................................................................
+//relational operators ==,<,>,<=,>=,!=
+
+#include<stdio.h>
+int main()
+{
+	int a=1,b=1;
+	printf("\na==b:%d",a==b);
+	printf("\na>:%d",a>b);
+	printf("\na<b:%d",a<b);
+	printf("\na>=b:%d",a>=b);
+	printf("\na<=b:%d",a<=b);
+	printf("\na!=b:%d",a!=b);
+	
+}
+//true=1,  folsh=0
+
+
+[6].................................................................................................
+//  ascii value
+#include<stdio.h>
+
+ void main()
+ 
+ {
+ 	char c;
+ 	printf("\n enter any character : ");
+ 	scanf("%c",&c);
+ 	
+ 	printf("\n the value of ASCII is %c: %d",c,c);
+ 	
+ 	return 0 ;
+ }
