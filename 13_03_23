@@ -1,0 +1,88 @@
+[1].......................................................................................................
+// function with no argumant
+#include<stdio.h>
+int fun();
+int fun()
+
+{
+	int a,b,sum;
+	printf("enter the value of a and b: \n");
+	scanf("%d%d",&a,&b);
+	sum=a+b;
+	printf("total value of number:%d\n",sum);
+}
+int fun1()
+{
+	int a,b,sub;
+	printf("enter the value of a and b: \n");
+	scanf("%d%d",&a,&b);
+	sub=a-b;
+	printf("total value of number:%d\n",sub);
+}
+int main()
+{
+	fun();
+	fun1();
+	return 0;
+}
+
+
+[2].......................................................................................................
+// function sum(+),sub(-)
+#include<stdio.h>
+
+void fun();    //decleration
+void fun()     // defination
+
+{
+	int a,b,sum;
+	printf("enter two number:\n");
+	scanf("%d%d",&a,&b);
+	sum=a+b;
+	printf("total value of two number are:%d\n",sum);
+}
+void fun1()    // defination
+{
+   int a,b,sub;
+   printf("enter value of two number are:\n");
+   scanf("%d%d",&a,&b);
+   sub=a-b;
+   printf("total value of number:%d\n",sub);
+}
+void main()
+{
+	fun();
+	fun();
+	fun1(); //calling
+	return 0;
+}
+
+
+[3].......................................................................................................
+// function sum(+),sub(-)
+#include<stdio.h>
+
+void fun();
+void fun()
+
+{
+	int a,b,mul;
+	printf("enter the value of a and b: \n");
+	scanf("%d%d",&a,&b);
+	mul=a*b;
+	printf("total  value of twe number:%d\n",mul);
+}
+void fun1()
+{
+	int a,b,div;
+	printf("enter the value of a and b:\n");
+	scanf("%d%d",&a,&b);
+	div=a/b;
+	printf("total value of two number:%d\n",div);
+}
+void main()
+{
+	fun();
+	fun1();
+	return 0;
+}
