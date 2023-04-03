@@ -1,0 +1,97 @@
+[1]........................................................................................................
+//switch case assessment..
+
+#include<stdio.h>
+int main()
+{
+	int Addition,Substraction,Multiplication,Division,choice,a,b;
+	
+	printf("\n\n....MENU....\n\n");
+	printf("1 Addition \n");
+	printf("2 Substraction \n");
+	printf("3 Multiplication \n");
+	printf("4 Division \n");
+	printf("\nEnter your choice:");
+	
+	switch(choice)
+	{
+		case 1: 
+		         printf("Enter any two number:\n");
+		        scanf("%d%d",&a,&b); 
+		        Addition=a+b;
+		        printf(" Addition of a and b is:%d", Addition);
+		        break;
+	
+		 case 2:
+		        printf("Enter any two number:\n");
+		       scanf("%d%d",&a,&b); 
+		       Substraction=a-b;
+		       printf("Substraction of a and b is:%d",Substraction);
+		        break;
+		 
+		 case 3: 
+		         printf("Enter any two number:\n");
+		         scanf("%d%d",&a,&b);
+		          Multiplication=a*b;
+		          printf("Multiplication of a and b is:%d",Multiplication);
+		          break;
+		 
+		 case 4:
+		            printf("Enter any two number:\n");
+		             scanf("%d%d",&a,&b);
+		             Division=a/b;
+		              printf("Division of a and b is:%d",Division);
+		             break;
+		 
+		 default:
+		              printf("Invalid choice !!!!");
+		              break;
+		 
+		 
+	}
+	return 0;
+}
+
+
+[2]........................................................................................................
+//no return type whith argument
+#include<stdio.h>
+
+void sum();  //declaration
+
+void sum(int a,int b)  //defination
+{
+	int a,b;
+	printf("Enter any two numbers: ");
+	scanf("%d%d",&a,&b);
+	
+	sum(a,b);
+
+}
+void main(int,int)
+{
+	int c;
+	c=a+b;
+	printf("Sum of two numbers is:%d",c);   //calling
+}
+
+
+[3]........................................................................................................
+//no return with no argument
+#include<stdio.h>
+int sum();
+int sum(int,int)
+{
+	int a,b;
+	printf("Enter any two numbers:\n");
+	scanf("%d%d",&a,&b);
+	
+	sum(a,b);
+	
+}
+int main(int,int)
+{
+	int c;
+	c=a+b;
+	printf("Sum of two numbers is:%d",c);
+}
