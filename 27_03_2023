@@ -1,0 +1,140 @@
+[1]...................................................................................................................
+// pointer program
+
+#include<stdio.h>
+
+int main()
+{
+	float a,*p;
+	printf("Enter the value of a: ");
+	scanf("%f",&a); 
+	
+	p = &a;
+	printf("value of a is: %f\n",*p); //number
+	printf("value of a is: %f\n",p);  //address
+	printf("value of a is: %f\n",&a); //address
+	printf("value of a is: %f\n",a);  //number
+	
+}
+
+
+[2]...................................................................................................................
+// pointer addition of two number
+
+#include<stdio.h>
+
+int main()
+{
+	int a,b,*p,*q,c;
+	printf("Enter the one value:\n");
+	scanf("%d",&a);
+	printf("Enter the second value:\n");
+	scanf("%d",&b);
+	
+	p=&a;
+	q=&b;
+	
+	c=*p+*q;
+	
+	printf("Sum of a and b is :%d",c);
+}
+
+
+[3]...................................................................................................................
+//structur program....
+
+#include<stdio.h>
+struct emp{
+	int id;
+	float salary;
+	char name[20];
+};
+
+int main()
+{
+	struct emp e1,e2;
+	
+	e1.id=23;
+ 	printf("your id is: %d",e1.id);
+ 	
+ 	e1.salary=60000.00;
+ 	printf("\n your salary is: %.2lf",e1.salary);
+ 	
+ 	strcpy(e1.name,"yash");
+ 	printf("\n your name is: yash",e1.name);
+
+	e2.id= 21;
+	printf("\nyour id is:%d",e2.id);
+	
+	e2.salary= 50000.00;
+	printf("\n your salary id: %.2lf",e2.salary);
+	
+	strcpy(e2.name,"parth");
+	printf("\n your name is: parth",e2.name);
+}
+
+
+
+[4]...................................................................................................................
+//swapping with pointer of any two variable
+
+#include<stdio.h>
+int main()
+{
+	int a=10,b=20,*p,*q,temp;
+	printf("print the value of a and b\n\n");
+	p=&a;
+	q=&b;
+	
+	temp=*p;
+	*p=*q;
+	*q=temp;
+	
+	printf("\n After swapping the value of \na: %d and \nb: %d",*p,*q,temp);
+}
+
+
+[5]...................................................................................................................
+// structure program in c- user defined datatype or derived
+
+#include<stdio.h>
+struct emp{
+
+   int id;
+   float salary;
+   char name[20];
+} e1;
+ 
+ int main()
+ {
+ 	e1.id=23;
+ 	printf("your id is: %d",e1.id);
+ 	
+ 	e1.salary=40000.00;
+ 	printf("\n your salary is: %.2lf",e1.salary);
+ 	
+ 	strcpy(e1.name,"parth");
+ 	printf("\n your name is: parth",e1.name);
+ }
+
+
+
+[6]...................................................................................................................
+//union program in c- user defined datatype or derived
+
+#include<stdio.h>
+union emp{
+	int id;
+	float salary;
+	char name[20];
+	
+} e1;
+int main()
+{
+	e1.id= 23;
+	printf("Your id is: %d",e1.id);
+	e1.salary=50000.00;
+	printf("\nYour salary is : %.2lf",e1.salary);
+	strcpy(e1.name,"parth");
+	printf("\n Your name is: parth",e1.name);
+}
