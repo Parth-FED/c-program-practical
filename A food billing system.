@@ -1,0 +1,83 @@
+// A food billing system
+
+#include<stdio.h>
+int main()
+{
+	int Pizza = 180;
+	int Burger = 100;
+	int Dosa = 120;
+	int Idli = 50;
+    int choose,quantity,amount,Total,y,n;
+	
+    
+   do{
+	printf("\t\n\n.........menu.........\t\n\n");
+    printf("1.Pizza      price = 180rs/pcs\n");
+    printf("2.Burger     price = 100rs/pcs\n");
+    printf("3.Dosa       price = 120rs/pcs\n");
+    printf("4.Idli       price = 50rs/pce\n");
+    
+    printf("Please Enter Your choose...: ");
+    scanf("%d",&choose);
+    
+	switch (choose)
+    {
+    	case 1 : printf("\nYou have selected Pizza  ");
+    	         printf("\nEnter your quantity.:");
+    	         scanf("%d",&quantity);
+    	         
+    	         Total=amount*quantity;
+    	         Total= 180*quantity;
+    	              printf("\nTotal amount is : %d",Total);
+    	              printf("\n Do you want place more order ? y & n: ");
+    	              scanf("%d",&choose);
+    	              break;
+    	              
+    	              
+    	case 2 : printf("\n You have selected Burger   ");
+		         printf("\n Enter your quantity.: ");
+				 scanf("%d",&quantity);
+				 
+				 Total=amount*quantity;
+				 Total= 100*quantity;
+				       printf("\n Total amount is : %d",Total);
+				       printf("\n Do you want place more order ? y & n: ");
+				       scanf("%d",&choose);
+					   break;
+        
+		case 3 : printf("\n You have selected Dosa.");
+		         printf("\n Enter your quantity.:");
+				 scanf("%D",&quantity);
+				 
+				 Total=amount*quantity;
+				 Total=120*quantity;
+				       printf("\n Total amount is : %d",Total);
+				       printf("\n Do you want place more order ? y & n: ");
+				       scanf("%d",&choose);
+				       break;
+				       
+		case 4 : printf("\n You havr selected Idli.");
+		         printf("\n Enter your quantity.: ");
+				 scanf("%d",&quantity);
+				 
+				 Total=amount*quantity;
+				 Total=50*quantity;
+				      printf("\n Total amount is : %d",Total);
+				      printf("\n Do you want place more order ? y & n: ");
+                      scanf("%d",&choose);
+					   break;
+					   
+	}
+    }
+     
+    while(choose == 'n');
+    printf("Invalid output...");
+
+    {
+    	printf("\nthankyou");
+	}
+                
+	  
+    return 0;
+}
+
