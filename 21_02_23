@@ -1,0 +1,127 @@
+[1]...............................................................................................................
+
+//if else
+
+#include<stdio.h>
+
+int main()
+{ 
+ int a;
+ printf("\n enter the value:");
+ scanf("%d",a);
+ 
+ if (a>=90)
+ {
+ 	printf("keep it");
+ }
+ else
+ {
+  printf("lesser");
+ }
+
+
+}
+
+
+[2]...............................................................................................................
+
+//a,e,i,o,u by if else
+#include<stdio.h>
+int main()
+{
+	char op;
+	
+	printf("\n enter the alphabet : ");
+	scanf("%d",&op);
+	
+	if(op=='a' ||op=='e' ||op=='i' ||op=='o' ||op=='u')
+	 
+	 printf("\n it is vowel");
+	 
+	 else
+	 {
+	 	printf("\n it is consonent");
+	 }
+}
+
+
+[3]...............................................................................................................
+
+//decisition making stetment (if,if else)
+
+#include<stdio.h>
+
+int main()
+{
+	int a;
+	
+	printf("\n enter the age: ");
+	scanf("%d",&a);
+	
+	if(a>=18)
+  {
+  	printf("\n you are eligible ");
+  }
+  else;
+  {
+
+  	printf("\n you are not eligible ");
+  }
+}
+
+
+[4]...............................................................................................................
+
+//even or odd number by if else
+#include<stdio.h>
+int main()
+{
+	int a;
+	printf("\n enter any number :");
+	scanf("%d",a);
+	
+	if(a%2==0)
+	{
+		printf("\nit is even number");
+	}
+	else
+	{
+		printf("\nit is odd number");
+	}
+}
+
+
+[5]...............................................................................................................
+
+// nested if:-
+
+#include<stdio.h>
+
+int main()
+{
+	int a,b,c;
+	printf("\n Enter any number : ");
+	scanf("%d%d%d", &a,&b,&c);
+	
+	if(a>b)
+	
+	 if(a>c)
+	 {
+	 	printf("\n A is greater");
+	 }
+	 else
+	 {
+	 	printf("\n C is greater");
+	 }
+	 
+	 else
+	  if(b>c)
+	  {
+	  	printf("\n B is greater");
+	  }
+	  else
+	  {
+	  	printf("\n C is greater");
+	  }
+	return 0;
+}
