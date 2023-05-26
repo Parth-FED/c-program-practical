@@ -1,0 +1,681 @@
+    //                                     MODULE: 4.1 (C++ Basic)
+    
+//1) WAP to print “Hello World” using C++
+    
+//-->  
+
+   /*  #include <iostream>
+
+     int main()
+	 {
+         std::cout << "Hello World!";
+         return 0;
+     }
+     */
+     
+//-------------------------------------------------------------------------------------------------------------------     
+//2) What is OOP? List OOP concepts 
+
+//-->
+     /* The C++ programming language is categorized as a partial object-oriented programming language
+	despite the fact that it supports OOP concepts, including classes, objects, inheritance, encapsulation,
+	abstraction, and polymorphism.*/
+	
+	  /* Object means a real word entity such as pen, chair, table etc. Object-Oriented Programming is a methodology
+	or paradigm to design a program using classes and objects. It simplifies the software development and
+	maintenance by providing some concepts:*/
+
+//-------------------------------------------------------------------------------------------------------------------
+	
+//3) What is the difference between OOP and POP? 
+
+//-->
+      /* OOP is object-oriented. POP is structure or procedure-oriented. The program is divided into objects. 	*/
+      
+      
+//-------------------------------------------------------------------------------------------------------------------
+
+//                                         MODULE: 4.2 (Programing with C++)
+
+// ////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+//1) WAP to create simple calculator using class
+
+//-->
+
+   /* # include <iostream>
+    using namespace std;
+
+       int main() {
+
+         char op;
+         float num1, num2;
+
+     cout << "Enter operator: +, -, *, /: ";
+     cin >> op;
+
+     cout << "Enter two number: ";
+     cin >> num1 >> num2;
+
+      switch(op) {
+
+        case '+':
+         cout << num1 << " + " << num2 << " = " << num1 + num2;
+         break;
+
+        case '-':
+         cout << num1 << " - " << num2 << " = " << num1 - num2;
+         break;
+
+        case '*':
+         cout << num1 << " * " << num2 << " = " << num1 * num2;
+         break;
+
+        case '/':
+         cout << num1 << " / " << num2 << " = " << num1 / num2;
+         break;
+
+      default:
+        // If the operator is other than +, -, * or /, error message is shown
+          cout << "Error! operator is not correct";
+           break;
+   }
+
+     return 0;
+ }     
+  */
+	
+//-------------------------------------------------------------------------------------------------------------------
+
+//2) Define a class to represent a bank account. Include the following members:
+/*1. Data Member:                           2. Member Functions
+-Name of the depositor                      -To assign values 
+-Account Number                             -To deposited an amount   
+-Type of Account                            -To withdraw an amount after checking balance   
+-Balance amount in the account              -To display name and balance     */
+
+//-->
+
+ /* #include<iostream>
+  #include<stdio.h>
+   #include<string.h>
+
+   using namespace std;
+
+    class bank
+ {
+        int accountno;
+        char nm[100], accounttype[100];
+        float bal;  
+   public:
+        bank(int account_no, char *name, char *account_type, float balance)  //Parameterized Constructor
+        {
+                accountno=account_no;
+                strcpy(nm, name);
+                strcpy(accounttype, account_type);
+                bal=balance;
+        }
+        void deposit();
+        void withdraw();
+        void display();
+ };
+  void bank::deposit()   //depositing an amount
+ {
+        int damt1;
+        cout<<"\n Enter Deposit Amount = ";
+        cin>>damt1;
+        bal+=damt1;
+ }
+   void bank::withdraw()  //withdrawing an amount
+ {
+        int wamt1;
+        cout<<"\n Enter Withdraw Amount = ";
+        cin>>wamt1;
+        if(wamt1>bal)
+                cout<<"\n Cannot Withdraw Amount";
+        bal-=wamt1;
+ }
+    void bank::display()  //displaying the details
+   {
+        cout<<"\n ----------------------";
+        cout<<"\n Accout No. : "<<accountno;
+        cout<<"\n Name : "<<nm;
+        cout<<"\n Account Type : "<<accounttype;
+        cout<<"\n Balance : "<<bal;  
+ }
+    int main()
+   {
+        int account_no;
+        char name[100], account_type[100];
+        float balance;
+        cout<<"\n Enter Details: \n";
+        cout<<"-----------------------";
+        cout<<"\n Accout No. ";
+        cin>>account_no;
+        cout<<"\n Name : ";
+        cin>>name;
+        cout<<"\n Account Type : ";
+        cin>>account_type;
+        cout<<"\n Balance : ";
+        cin>>balance;
+  
+        bank b1(account_no, name, account_type, balance);  //object is created
+        b1.deposit(); //
+        b1.withdraw(); // calling member functions
+        b1.display(); //
+        return 0;
+  }	
+	
+*/
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//3) Write a program to find the multiplication values and the cubic values using inline function
+
+//-->
+
+   /*  #include<iostream>
+      using namespace std;
+
+
+       class line
+  {
+     public:
+              inline float mul(float p,float q)
+              {
+                            return(p*q);
+              }
+              inline float cube(float p)
+              {
+                            return(p*p*p);
+              }
+  };
+
+       int main()
+ {
+              line obj;
+              float val1,val2;
+
+              cout<<"\nEnter 1st value :: ";
+              cin>>val1;
+              cout<<"\nEnter 2nd value :: ";
+              cin>>val2;
+              cout<<"\nMultiplication value is :: "<<obj.mul(val1,val2);
+              cout<<"\n\nCube value of  [ " <<obj.cube(val1)<<" ] is :: ["<<obj.cube(val2)<<" ]\n";
+
+              return 0;
+  } 
+  */
+  
+//-------------------------------------------------------------------------------------------------------------------
+
+//4) Write a program of Addition, Subtraction, Division, Multiplication using constructor. 
+
+//-->
+   /* #include<iostream>
+    using namespace std;
+    int main()
+ {
+    int num1, num2, res;
+    cout<<"Enter Two Numbers: ";
+    cin>>num1>>num2;
+    res = num1+num2;
+    cout<<endl<<"Add Result = "<<res<<endl;
+    res = num1-num2;
+    cout<<endl<<"Sub Result = "<<res<<endl;
+    res = num1*num2;
+    cout<<endl<<"Mul Result = "<<res<<endl;
+    res = num1/num2;
+    cout<<endl<<"Div Result = "<<res<<endl;
+    return 0;
+ } 
+ */
+ 
+//-------------------------------------------------------------------------------------------------------------------
+
+/*5) Assume a class cricketer is declared. Declare a derived class batsman from cricketer. Data member of batsman.
+ Total runs, Average runs and best performance. Member functions input data, calculate average runs, Display data.
+ (Single Inheritance)  */
+ 
+ //-->
+ /*   #include <bits/stdc++.h>
+    using namespace std;
+ 
+
+    double averageRuns(int runs,
+                   int matches,
+                   int notout)
+ {
+    // Calculate number of
+    // dismissals
+    int out = matches - notout;
+ 
+    // check for 0 times out
+    if (out == 0)
+        return -1;
+ 
+    // Calculate batting average
+    double avg = double(runs) / out;
+ 
+    return avg;
+ }
+ 
+  // Driver Program
+  int main()
+  {
+    int runs = 10000;
+    int matches = 250;
+    int notout = 50;
+ 
+    double avg
+        = averageRuns(
+            runs, matches, notout);
+ 
+    if (avg == -1)
+        cout << "NA";
+    else
+        cout << avg;
+ 
+    return 0;
+ }
+ /*
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+ /* 6) ? Create a class person having members name and age. Derive a class student having member percentage.
+  Derive another class teacher having member salary. Write necessary member function to initialize, read and 
+  write data. Write also Main function (Multiple Inheritance) */
+
+//-->
+
+   /*  #include<iostream>
+     using namespace std;
+      class Person{
+     	private:
+		string name;
+		int age;
+    	public:
+	    	void setPerson(int a, string n){
+			name = n;
+			age = a;
+		}
+		    void displayPerson(){
+			cout<<"Name:  "<<name<<endl;
+			cout<<"Age:    "<<age<<endl;
+		}
+		
+	
+   };
+      class Student: Person{
+	private:
+		float percentage;
+	public:
+		void setStudent(string n, int a, float p){
+			percentage = p;
+			setPerson(a,n);
+		}
+		void displayStudent(){
+			cout<<"Student details are: \n";
+			displayPerson();
+			cout<<"Prcentage is:  "<<percentage<<endl;
+		}
+};
+     class  Teacher: Person{
+	private:
+		float salary;
+	public:
+		void setTeacher(string n, int a, float s){
+			salary = s;
+			setPerson(a,n);
+		}
+		void displayTeacher(){
+			cout<<"Teachers details are: \n";
+			displayPerson();
+			cout<<"Salary:  "<<salary<<endl;
+		}
+};
+
+
+int main(){
+	Student s;
+	s.setStudent("parth", 12,90);
+	s.displayStudent();
+	Teacher t;
+	t.setTeacher("aniket", 15, 9000.95);
+	t.displayTeacher();
+}
+ */
+ 
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+ 
+ /*7) Assume that the test results of a batch of students are stored in three different classes. Class Students are 
+  storing the roll number. Class Test stores the marks obtained in two subjects and class result contains the total
+  marks obtained in the test. The class result can inherit the details of the marks obtained in the test and roll 
+  number of students. (Multilevel Inheritance)*/
+  
+//-->
+
+/*     #include <iostream>
+    using namespace std;
+
+   struct student
+  {
+    char name[50];
+    int roll;
+    float marks;
+ };
+
+  int main() 
+ {
+    student s;
+    cout << "Enter info," << endl;
+    cout << "Enter name: ";
+    cin >> s.name;
+    cout << "Enter roll number: ";
+    cin >> s.roll;
+    cout << "Enter marks: ";
+    cin >> s.marks;
+
+    cout << "\nDisplaying Info," << endl;
+    cout << "Name: " << s.name << endl;
+    cout << "Roll: " << s.roll << endl;
+    cout << "Marks: " << s.marks << endl;
+    return 0;
+}
+  */
+  
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+ 
+ /*8) Write a program to Mathematic operation like Addition, Subtraction, Multiplication, Division Of two number
+  using different parameters and Function Overloading */
+  
+ //-->
+  /* #include <iostream>
+   using namespace std;
+ 
+  int main(){
+    
+    int x, y;
+    int sum, difference, product, modulo;
+    float quotient;
+   
+    cout << "Enter First Number\n";
+    cin >> x;
+    cout << "Enter Second Number\n";
+    cin >> y;
+     
+    
+    sum = x + y;
+  
+    difference = x - y;
+    
+    product = x * y;
+    
+    quotient = (float)x / y;
+    
+    modulo = x % y;
+     
+    cout << "\nSum = " << sum;
+    cout << "\nDifference  = " <<difference;
+    cout << "\nMultiplication = " << product;
+    cout << "\nDivision = " << quotient;
+    cout << "\nRemainder = " << modulo;
+     
+    return 0;
+} */
+
+  
+ //-------------------------------------------------------------------------------------------------------------------
+ 
+ //9) Write a program to concatenate the two strings using Operator Overloading
+ 
+ //-->
+  /* #include<iostream>  
+       #include<conio.h>  
+     using namespace std;  
+  
+class String  
+{  
+    char str[20];
+public:  
+    void input() //member function  
+    {  
+        cout<<"Enter your string: ";  
+        cin.getline(str,20);  
+    }  
+    void display() //member function for output  
+    {  
+        cout<<"String: "<<str;  
+    }  
+    String operator+(String s) //overloading   
+    {  
+        String obj;  
+        strcat(str,s.str);  
+        strcpy(obj.str,str);  
+        return obj;  
+    }  
+};  
+void main()  
+{  
+    String str1,str2,str3; //creating three object  
+    str1.input();  
+    str2.input();  
+    str3=str1+str2;  
+    str3.display();  
+    getch();  
+} 
+ */
+ 
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+/* 10)- Write a program to calculate the area of circle, rectangle and triangle using Function Overloading
+- Rectangle: Area * breadth
+- Triangle: ½ *Area* breadth
+- Circle: Pi * Area *Area */
+
+//-->
+  /*     #include<iostream>
+     using namespace std;
+      int area(int);
+      int area(int,int);
+      float area(float);
+      float area(float,float);
+      int main()
+ {
+        int s,l,b;
+        float r,bs,ht;
+        cout<<"Enter side of a square:";
+        cin>>s;
+        cout<<"Enter length and breadth of rectangle:";
+        cin>>l>>b;
+        cout<<"Enter radius of circle:";
+        cin>>r;
+        cout<<"Enter base and height of triangle:";
+        cin>>bs>>ht;
+        cout<<"Area of square is"<<area(s);
+        cout<<"\nArea of rectangle is "<<area(l,b);
+    cout<<"\nArea of circle is "<<area(r);
+    cout<<"\nArea of triangle is "<<area(bs,ht);
+ }
+    int area(int s)
+ {
+    return(s*s);
+ }
+    int area(int l,int b)
+ {
+    return(l*b);
+}
+   float area(float r)
+{
+    return(3.14*r*r);
+}
+  float area(float bs,float ht)
+{
+   return((bs*ht)/2);
+}
+ */
+ 
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+ 
+ //11) Write a program to swap the two numbers using friend function without using third variable 
+ 
+//-->
+  /*  #include<iostream>
+    using namespace std;
+    class SwapNumbers
+{ 
+	private:
+		int x,y;
+	public:
+	void getdata()
+	{ 
+		cin>>x>>y;
+	}
+	void showdata()
+	{
+	 cout<<"X="<<x<<"Y="<<y;
+	}
+	friend void swap(SwapNumbers&s);
+};
+
+// Friend function to swap  numbers
+void swap(SwapNumbers&s)
+{ 
+	int temp;
+	temp=s.x;
+	s.x=s.y;
+	s.y=temp;
+}
+int main()
+{
+	SwapNumbers s;
+	cout<<"Input two numbers to swap:";
+	s.getdata();
+	Page | 10
+	cout<<endl<<"Before swapping:"<<endl;
+	s.showdata();
+	swap(s);
+	cout<<endl<<"After swapping:"<<endl;
+	s.showdata();
+	return 0;
+} 
+ */
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+ 
+// 12) Write a program to find the max number from given two numbers using friend function 
+ 
+ //-->
+ /*  #include <iostream>
+   using namespace std;
+   int main()
+ {
+    int x, y;
+    cout << "Enter any two numbers: ";
+    cin >> x >> y;
+    if (x > y)
+    {
+        cout << "Max number is " << x;
+    }
+    else
+    {
+        cout << "Max number is " << y;
+    }
+    return 0;
+ }
+ */
+ 
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+ 
+ //                                               MODULE: 4.2 (C, C++ Templates)
+ // ////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ 
+ 
+ // 1) Write a program of to swap the two values using templates
+ 
+ //-->
+ /* #include <iostream>
+   using namespace std;
+  
+
+   // two numbers
+   template <class T>
+   int swap_numbers(T& a, T& b)
+  {
+    T t;
+    t = a;
+    a = b;
+    b = t;
+    return 0;
+ }
+  
+  // Driver code
+ int main()
+  {
+    int x, y;
+    x = 10, y = 20;
+  
+    // Invoking swap()
+    swap_numbers(x, y);
+    cout << x << " " << y << endl;
+    return 0;
+ }
+ */
+ 
+ //-------------------------------------------------------------------------------------------------------------------
+ 
+// 2) Write a program of to sort the array using templates.
+
+//-->
+/*#include<iostream>
+using namespace std;
+#define N 10
+
+template <class T>
+void sort(T arr[], int SIZE){
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = i+1; j < SIZE; j++)
+		{
+			if (arr[i] > arr[j])
+			{
+				T temp;
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+}
+
+int main(){
+	int int_array[N];
+	float float_array[N];
+	cout<<"Entner array elements:"<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cin>>int_array[i];
+	}
+	cout<<"Entner array elements:"<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cin>>float_array[i];
+	}
+	sort(int_array,N);
+	sort(float_array, N);
+	cout<<"After sorting :"<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout<<int_array[i]<<", ";
+	}
+	cout<<endl;
+	for (int i = 0; i < N; i++)
+	{
+		cout<<float_array[i]<<", ";
+	}
+	return 0;
+} 
+*/
